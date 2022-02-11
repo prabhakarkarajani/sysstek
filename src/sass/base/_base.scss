@@ -5,3 +5,26 @@
   padding: 0;
   box-sizing: inherit;
 }
+
+html {
+  // This defines what 1rem is
+  font-size: 1rem; //1 rem = 10px; 10px/16px = 62.5%;
+
+  @include respond(phone) {
+    font-size: 0.875rem;
+  }
+
+  @include respond(tab-land) {
+    //width < 1200 ?
+    font-size: 1rem; //1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //width < 900 ?
+    font-size: 0.875rem; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 1.125rem; //1rem =12, 12/16
+  }
+}

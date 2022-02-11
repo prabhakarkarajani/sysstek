@@ -28,10 +28,10 @@ body {
     animation-iteration-count: 3;
      */
 
-    @include respond(phone) {
-      letter-spacing: 1rem;
-      font-size: 5rem;
-    }
+    // @include respond(phone) {
+    //   letter-spacing: 1rem;
+    //   font-size: 5rem;
+    // }
   }
 
   &--sub {
@@ -55,7 +55,7 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
- 
+
   &--sub {
     display: block;
     font-size: 2rem;

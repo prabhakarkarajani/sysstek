@@ -126,7 +126,15 @@ function Header(props) {
                     }}
                   >
                     {pages.map((page) => (
-                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <MenuItem
+                        key={page}
+                        onClick={() => {
+                          handleCloseNavMenu();
+                          const url =
+                            page === "Contact Us" ? "/connect" : `/${page}`;
+                          history.push(url);
+                        }}
+                      >
                         <Typography textAlign="center">{page}</Typography>
                       </MenuItem>
                     ))}
