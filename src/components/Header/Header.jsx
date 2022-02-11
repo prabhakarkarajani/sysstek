@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     marginLeft: theme.spacing(2),
     height: 100,
+    cursor: "pointer",
   },
   title: {
     flexGrow: 1,
@@ -84,7 +85,14 @@ function Header(props) {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
-                <img src={Logo} className={classes.logo} />
+                <img
+                  src={Logo}
+                  className={classes.logo}
+                  alt="logo"
+                  onClick={() => {
+                    history.push("/home");
+                  }}
+                />
               </div>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
