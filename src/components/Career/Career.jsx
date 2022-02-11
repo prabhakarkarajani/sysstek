@@ -23,7 +23,7 @@ function Career() {
                   component="div"
                   // sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                 >
-                  Please visit in couple of days.
+                  Please visit after few days.
                 </Typography>
               </div>
             </Grid>
