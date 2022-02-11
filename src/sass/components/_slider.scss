@@ -1,0 +1,48 @@
+.slider {
+  &--fadeout {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    // &::before {
+    //   -webkit-animation: fadeinout 10s -0s infinite;
+    //   animation: fadeinout 10s -0s infinite;
+    // }
+    // &::after {
+    //   -webkit-animation: fadeinout 10s -0s infinite;
+    //   animation: fadeinout 10s -0s infinite;
+    // }
+  }
+  img {
+    &::before {
+      -webkit-animation: ease-in-out 10s -0s infinite;
+      animation: fadeout 10s -0s infinite;
+    }
+    &::after {
+      -webkit-animation: ease-in-out 10s -0s infinite;
+      animation: fadein 10s -0s infinite;
+    }
+  }
+
+  &--nav {
+    // arrow placeing
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    span {
+      margin: 0 5rem;
+    }
+    i {
+      font-size: 5rem;
+      // border-radius: 5rem;
+      &:hover {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-0.2rem);
+      }
+      &:active {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+        transform: translateY(0);
+      }
+    }
+  }
+}
