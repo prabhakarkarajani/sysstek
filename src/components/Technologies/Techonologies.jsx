@@ -28,6 +28,9 @@ import cloudDB from "../../assets/cloud-db.svg";
 import cloudComputing1 from "../../assets/cloud-computing-1.svg";
 import deploymentImg from "../../assets/deploymentImg.svg";
 function Technologies() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="hero-container">

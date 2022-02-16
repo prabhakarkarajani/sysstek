@@ -13,6 +13,9 @@ import partnershipImg from "../../assets/partnership-img.svg";
 import TestingPerson from "../../assets/consultng.svg";
 
 function Services() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="hero-container">
