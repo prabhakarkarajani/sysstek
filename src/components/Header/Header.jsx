@@ -59,7 +59,21 @@ function Header(props) {
     setAnchorElNav(null);
   };
 
-  const show = history.location && history.location.pathname === "/";
+  const show = history.location && history.location.pathname === "/404";
+
+  const setPath = (pathname) => {
+    switch (pathname) {
+      case "Home":
+        return `/`;
+        break;
+      case "Contact Us":
+        return "/Connect";
+        break;
+      default:
+        return `/${pathname}`;
+        break;
+    }
+  };
   return (
     <div className={classes.root}>
       {!show && (
@@ -145,7 +159,7 @@ function Header(props) {
                 <div className={classes.navBar}>
                   {pages.map((page) => (
                     <NavLink
-                      to={page === "Contact Us" ? "/Connect" : `/${page}`}
+                      to={setPath(page)}
                       exact
                       activeClassName="active"
                       className="btn-nav"
