@@ -63,15 +63,15 @@ function Header(props) {
 
   const setPath = (pathname) => {
     switch (pathname) {
-      case "Home":
+      case "Home": {
         return `/`;
-        break;
-      case "Contact Us":
+      }
+      case "Contact Us": {
         return "/Connect";
-        break;
-      default:
+      }
+      default: {
         return `/${pathname}`;
-        break;
+      }
     }
   };
   return (
@@ -90,7 +90,7 @@ function Header(props) {
                 component="div"
                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
               >
-                <img src={Logo} />
+                <img src={Logo} alt="logo" />
               </Typography>
 
               <div
@@ -104,7 +104,7 @@ function Header(props) {
                   className={classes.logo}
                   alt="logo"
                   onClick={() => {
-                    history.push("/home");
+                    history.push("/");
                   }}
                 />
               </div>
