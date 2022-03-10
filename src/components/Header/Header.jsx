@@ -38,6 +38,56 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
+  partner: {
+    width: "100px",
+    textAlign: "center",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: 40,
+    color: "#333",
+    "& img": {
+      width: "100%",
+      height: "100%",
+    },
+    "& $title": {
+      position: "absolute",
+    },
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      width: "250px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: "flex",
+      width: "250px",
+    },
+  },
+  partnerMobile: {
+    width: "100%",
+    textAlign: "center",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    marginTop: 20,
+    paddingTop: 10,
+    paddingBottom: 5,
+    background: "#d9e8f9",
+    color: "#065997",
+    "& img": {
+      width: "35%",
+    },
+    "& $title": {
+      position: "absolute",
+    },
+    [theme.breakpoints.down("xs")]: {
+      "& img": {
+        width: "60%",
+      },
+    },
+  },
 }));
 
 const pages = [
@@ -108,6 +158,12 @@ function Header(props) {
                   }}
                 />
               </div>
+              {/* <div className={classes.partner}>
+                <Typography className={classes.title} variant="body">
+                  member of
+                </Typography>
+                <img src={require("../../assets/partner.png")} alt="partner" />
+              </div> */}
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <div className={classes.navBar}>
@@ -171,6 +227,12 @@ function Header(props) {
               </Box>
             </Toolbar>
           </Container>
+          <div className={classes.partnerMobile}>
+            <Typography className={classes.title} variant="body">
+              member of
+            </Typography>
+            <img src={require("../../assets/partner.png")} alt="partner" />
+          </div>
         </AppBar>
       )}
     </div>

@@ -7,7 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import { findFlagUrlByNationality } from "country-flags-svg";
 function Footer() {
   const flagUrl = findFlagUrlByNationality("American");
-  const show = history.location && history.location.pathname === "/";
+  const show = history.location && history.location.pathname === "/404";
+  // const show = history.location && history.location.pathname === "/";
   return (
     <>
       {!show && (
