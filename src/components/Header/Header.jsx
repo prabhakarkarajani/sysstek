@@ -16,6 +16,7 @@ import Logo from "../../assets/logo.svg";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    position: "relative",
   },
   logo: {
     marginRight: theme.spacing(2),
@@ -38,49 +39,28 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-end",
   },
-  partner: {
-    width: "100px",
-    textAlign: "center",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    paddingTop: 40,
-    color: "#333",
-    "& img": {
-      width: "100%",
-      height: "100%",
-    },
-    "& $title": {
-      position: "absolute",
-    },
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
-    },
-    [theme.breakpoints.down("sm")]: {
-      display: "flex",
-      width: "250px",
-    },
-    [theme.breakpoints.up("lg")]: {
-      display: "flex",
-      width: "250px",
-    },
-  },
   partnerMobile: {
-    width: "100%",
-    textAlign: "center",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    marginTop: 20,
-    paddingTop: 10,
-    paddingBottom: 5,
-    background: "#d9e8f9",
+    top: "100px",
     color: "#065997",
+    right: "20px",
+    width: "200px",
+    display: "flex",
+    position: "absolute",
+    background: "#fafafa",
+    marginTop: "20px",
+    padding: "10px",
+    justifyContent: "flex-end",
+    borderRadius: "10px",
+    border: "dashed 0.5px #e87950",
+    zIndex: 1,
     "& img": {
-      width: "35%",
+      width: "190px",
+      paddingTop: "10px",
     },
     "& $title": {
       position: "absolute",
+      right: "15px",
+      fontSize: "0.85rem",
     },
     [theme.breakpoints.down("xs")]: {
       "& img": {
@@ -158,12 +138,6 @@ function Header(props) {
                   }}
                 />
               </div>
-              {/* <div className={classes.partner}>
-                <Typography className={classes.title} variant="body">
-                  member of
-                </Typography>
-                <img src={require("../../assets/partner.png")} alt="partner" />
-              </div> */}
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <div className={classes.navBar}>
@@ -229,7 +203,7 @@ function Header(props) {
           </Container>
           <div className={classes.partnerMobile}>
             <Typography className={classes.title} variant="body">
-              member of
+              <i>Member of</i>
             </Typography>
             <img src={require("../../assets/partner.png")} alt="partner" />
           </div>

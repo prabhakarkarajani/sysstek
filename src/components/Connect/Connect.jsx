@@ -23,11 +23,11 @@ function Connect() {
   }, [isMessageActive]);
 
   const validationSchema = yup.object().shape({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    mobilenumber: yup
+    name: yup.string().required("Name is required"),
+    email: yup.string().email().required("Email is required"),
+    phoneNumber: yup
       .string()
-      .required()
+      .required("Phone Number is required")
       .matches(
         /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
         "Phone number not valid"
@@ -51,7 +51,7 @@ function Connect() {
                 initialValues={{
                   email: "",
                   name: "",
-                  mobilenumber: "",
+                  phoneNumber: "",
                   project: "Web Application Development",
                   callme: "any",
                   referrence: "referred by friend",
@@ -83,15 +83,16 @@ function Connect() {
                 {({ isSubmitting }) => (
                   <Form>
                     <div className="form__group">
+                      <label for="name" className="form__label">
+                        Name
+                      </label>
                       <Field
                         type="text"
                         name="name"
                         className="form__input"
                         placeholder="Name"
                       />
-                      <label for="name" className="form__label">
-                        Name
-                      </label>
+
                       <ErrorMessage
                         name="name"
                         component="div"
@@ -99,15 +100,16 @@ function Connect() {
                       />
                     </div>
                     <div className="form__group">
+                      <label for="email" className="form__label">
+                        Email
+                      </label>
                       <Field
                         type="email"
                         name="email"
                         className="form__input"
                         placeholder="Email"
                       />
-                      <label for="email" className="form__label">
-                        Email
-                      </label>
+
                       <ErrorMessage
                         name="email"
                         component="div"
@@ -115,22 +117,26 @@ function Connect() {
                       />
                     </div>
                     <div className="form__group">
+                      <label for="phoneNumber" className="form__label">
+                        Phone number
+                      </label>
                       <Field
                         type="text"
-                        name="mobilenumber"
+                        name="phoneNumber"
                         className="form__input"
                         placeholder="Phone Number"
                       />
-                      <label for="mobilenumber" className="form__label">
-                        Phone number
-                      </label>
+
                       <ErrorMessage
-                        name="mobilenumber"
+                        name="phoneNumber"
                         component="div"
                         className="error"
                       />
                     </div>
                     <div className="form__group">
+                      <label for="callme" className="form__label">
+                        Preferred Time
+                      </label>
                       <Field
                         name="callme"
                         className="form__input"
@@ -153,9 +159,7 @@ function Connect() {
                         <option value="4:00PM-6:00PM">4:00 PM - 6:00 PM</option>
                         <option value="6:00PM-8:00PM">4:00 PM - 6:00 PM</option>
                       </Field>
-                      <label for="callme" className="form__label">
-                        Preferred Time
-                      </label>
+
                       <ErrorMessage
                         name="callme"
                         component="div"
@@ -163,6 +167,9 @@ function Connect() {
                       />
                     </div>
                     <div className="form__group">
+                      <label for="project" className="form__label">
+                        Select Project
+                      </label>
                       <Field
                         name="project"
                         className="form__input"
@@ -177,9 +184,7 @@ function Connect() {
                         </option>
                         <option value="Other">Other</option>
                       </Field>
-                      <label for="project" className="form__label">
-                        Select Project
-                      </label>
+
                       <ErrorMessage
                         name="project"
                         component="div"
@@ -187,6 +192,9 @@ function Connect() {
                       />
                     </div>
                     <div className="form__group u-margin-bottom-small">
+                      <label for="referrence" className="form__label">
+                        How did you hear about us?
+                      </label>
                       <Field
                         name="referrence"
                         className="form__input"
@@ -205,9 +213,7 @@ function Connect() {
                         </option>
                         <option value="other">other.</option>
                       </Field>
-                      <label for="referrence" className="form__label">
-                        How did you hear about us?
-                      </label>
+
                       <ErrorMessage
                         name="referrence"
                         component="div"
