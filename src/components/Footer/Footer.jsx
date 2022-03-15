@@ -32,8 +32,17 @@ function Footer() {
                       component="div"
                       className="footer-title-secondary"
                     >
-                      Call us <br />
+                      Hello <br />
                       781-SYS-STEK (781-797-7835)
+                    </Typography>
+                    <br />
+                    <Typography
+                      variant="body"
+                      component="div"
+                      className="footer-title-secondary"
+                    >
+                      Email <br />
+                      info@sysstek.com
                     </Typography>
                   </Grid>
                 </Grid>
