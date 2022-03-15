@@ -68,6 +68,40 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  partner: {
+    // top: "100px",
+    color: "#065997",
+    // right: "20px",
+    width: "200px",
+    display: "flex",
+    position: "relative",
+    // background: "#fafafa",
+    marginTop: "20px",
+    marginLeft: "100px",
+    padding: "10px",
+    justifyContent: "flex-end",
+
+    borderRadius: "10px",
+    // border: "dashed 0.5px #e87950",
+    // zIndex: 1,
+    "& img": {
+      width: "190px",
+      paddingTop: "10px",
+    },
+    "& $title": {
+      position: "absolute",
+      right: "15px",
+      fontSize: "0.85rem",
+      textAlign: "center",
+      top: "15px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      // display: "none",
+      "& img": {
+        width: "60%",
+      },
+    },
+  },
 }));
 
 const pages = [
@@ -138,7 +172,12 @@ function Header(props) {
                   }}
                 />
               </div>
-
+              <div className={classes.partner}>
+                <Typography className={classes.title} variant="body">
+                  <i>Member of</i>
+                </Typography>
+                <img src={require("../../assets/partner.png")} alt="partner" />
+              </div>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <div className={classes.navBar}>
                   <IconButton
@@ -201,12 +240,12 @@ function Header(props) {
               </Box>
             </Toolbar>
           </Container>
-          <div className={classes.partnerMobile}>
+          {/* <div className={classes.partnerMobile}>
             <Typography className={classes.title} variant="body">
               <i>Member of</i>
             </Typography>
             <img src={require("../../assets/partner.png")} alt="partner" />
-          </div>
+          </div> */}
         </AppBar>
       )}
     </div>
