@@ -173,10 +173,17 @@ function Header(props) {
                 />
               </div>
               <div className={classes.partner}>
-                <Typography className={classes.title} variant="body">
+                {/* <Typography className={classes.title} variant="body">
                   <i>Member of</i>
                 </Typography>
-                <img src={require("../../assets/partner.png")} alt="partner" />
+                <img src={require("../../assets/partner.png")} alt="partner" /> */}
+                <a href="https://www.uschamber.com">
+                  <img
+                    alt="U.S. Chamber of Commerce Member 2021"
+                    src="https://www.uschamber.com/assets/images/USCC_Webstickers_2022_234x75.png"
+                    title="U.S. Chamber of Commerce Member"
+                  />
+                </a>
               </div>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <div className={classes.navBar}>
