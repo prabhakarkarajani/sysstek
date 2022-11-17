@@ -77,7 +77,7 @@ function Services() {
                 <Typography variant="body" component="body">
                   With years of experience, our staff has the capabilities and
                   expertise to take your business to the next level. At
-                  pistosis, we combine our insights and skills to transform your
+                  sysstek, we combine our insights and skills to transform your
                   processes and strategies, and in turn, your company. We’re
                   proud to help shape and improve how our clients structure and
                   manage their business.
