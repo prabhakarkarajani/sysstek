@@ -60,8 +60,8 @@ function Footer() {
                   component="div"
                   className="footer-address"
                 >
-                  Sysstek 4395, isabelline blf, <br />
-                  Suite - S Cumming,GA 30040
+                  2450 Atlanta Hwy, <br />
+                  Suite 802, Cumming GA 30040
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={12} className="footer__copyright">
